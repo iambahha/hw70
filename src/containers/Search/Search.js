@@ -36,12 +36,12 @@ const Search = (props) => {
 			<Form>
 				<FormGroup>
 					<Label for="text">Search for TV Shows</Label>
-					<Input type="text" name="text" id="text" autoComplete="off" placeholder="Enter name of movie"
+					<Input type="text" name="text" id="text" placeholder="Enter name of movie"
 								 onChange={(event) => valueChanged(event.target.value)}/>
 				</FormGroup>
 			</Form>
 			{ movies ?
-				<ul style={{listStyleType: 'none', border: '1px solid grey'}}>
+				<ul style={{listStyleType: 'none', border: '1px solid'}}>
 					{movies.map(movie => (
 						<Item key={movie.key} name={movie.name} id={movie.key} onClick={closeAutocomplete}/>
 					))}
