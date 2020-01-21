@@ -27,8 +27,8 @@ const Search = (props) => {
 	};
 
 	const closeAutocomplete = () => {
-		const movieClean = null;
-		setMovies(movieClean);
+		const movieList = null;
+		setMovies(movieList);
 	};
 
 	return (
@@ -43,7 +43,7 @@ const Search = (props) => {
 			{ movies ?
 				<ul style={{listStyleType: 'none', border: '1px solid grey'}}>
 					{movies.map(movie => (
-						<Item key={movie.key} name={movie.name} id={movie.key} clicked={closeAutocomplete}/>
+						<Item key={movie.key} name={movie.name} id={movie.key} onClick={closeAutocomplete}/>
 					))}
 				</ul>
 				: null
